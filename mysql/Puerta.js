@@ -1,19 +1,16 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Aerolinea = sequelize.define("Aerolinea", {
-    id_aerolinea: {
+  var Puerta = sequelize.define("Puerta", {
+    id_puerta: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
     },
-    nombre:{
-        type : DataTypes.STRING
-    },
-    codigo:{
+    id_terminal:{
         type : DataTypes.STRING
     }
   }, { freezeTableName: true,
-  tableName: 'aerolinea'});
-  return Aerolinea;
+  tableName: 'puerta'});
+  return Puerta;
 };
