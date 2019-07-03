@@ -1,29 +1,19 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
-    id: {
+  var Aerolinea = sequelize.define("Aerolinea", {
+    id_aerolinea: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
     },
-    user:{
+    nombre:{
         type : DataTypes.STRING
     },
-    password:{
-        type : DataTypes.STRING
-    },
-    profile:{
-       type : DataTypes.STRING
-    },
-    sede:{
+    codigo:{
         type : DataTypes.STRING
     }
   }, { freezeTableName: true,
-  tableName: 'User'});
-
-
-
-//Tarjeta.removeAttribute('id');
-  return User;
+  tableName: 'aerolinea'});
+  return Aerolinea;
 };
