@@ -1,19 +1,63 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Aerolinea = sequelize.define("Aerolinea", {
-    id_aerolinea: {
+  var Vuelo = sequelize.define("Vuelo", {
+    id_vuelo: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
     },
-    nombre:{
+    id_origen:{
         type : DataTypes.STRING
     },
-    codigo:{
+    id_destino:{
         type : DataTypes.STRING
+    },
+    id_aerolinea:{
+        type : DataTypes.STRING
+    },
+    id_avion:{
+        type : DataTypes.STRING
+    },
+    id_terminal:{
+        type : DataTypes.STRING
+    },
+    id_puerta:{
+        type : DataTypes.STRING
+    },
+    id_estado:{
+        type : DataTypes.STRING
+    },
+    id_ubicacion_avion:{
+        type : DataTypes.STRING
+    },
+    duracion:{
+        type : DataTypes.STRING
+    },
+    fecha:{
+        type : DataTypes.STRING
+    },
+    hora_de_salida:{
+        type : DataTypes.STRING
+    },
+    hora_de_llegada:{
+        type : DataTypes.STRING
+    },
+    clima:{
+        type : DataTypes.STRING
+    },
+    codigo_vuelo:{
+        type : DataTypes.STRING
+    },
+    createdAt:{
+      type : DataTypes.DATE,
+      field : "created_at"
+    },
+    updatedAt:{
+      type : DataTypes.DATE,
+      field : "updated_at"
     }
   }, { freezeTableName: true,
-  tableName: 'aerolinea'});
-  return Aerolinea;
+  tableName: 'vuelo'});
+  return Vuelo;
 };

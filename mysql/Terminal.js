@@ -1,18 +1,16 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Aerolinea = sequelize.define("Aerolinea", {
-    id_aerolinea: {
+  var Terminal = sequelize.define("Terminal", {
+    id_terminal: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
          primaryKey: true
     },
-    nombre:{
+    direccion:{
         type : DataTypes.STRING
     },
-    codigo:{
-        type : DataTypes.STRING
-    },
+
     createdAt:{
       type : DataTypes.DATE,
       field : "created_at"
@@ -22,6 +20,6 @@ module.exports = function(sequelize, DataTypes) {
       field : "updated_at"
     }
   }, { freezeTableName: true,
-  tableName: 'aerolinea'});
-  return Aerolinea;
+  tableName: 'terminal'});
+  return Terminal;
 };
