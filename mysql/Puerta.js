@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Puerta = sequelize.define("Puerta", {
+  var Puerta = sequelize.define("puerta", {
     id_puerta: {
       type: DataTypes.INTEGER,
          autoIncrement: true,

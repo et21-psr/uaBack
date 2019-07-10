@@ -9,6 +9,13 @@ var usersRouter = require('./routes/users');
 var aerolineasRouter = require('./routes/aerolineas');
 var avionRouter = require('./routes/avion');
 var cronogramaRouter = require('./routes/cronograma');
+var estadoRouter = require('./routes/estado');
+var pasajeroRouter = require('./routes/pasajero');
+var pilotoRouter = require('./routes/piloto');
+var terminalRouter = require('./routes/terminal');
+var ubicacionavionRouter = require('./routes/ubicacion_avion');
+var ubicacionRouter = require('./routes/ubicacion');
+var vueloRouter = require('./routes/vuelo');
 
 var app = express();
 
@@ -22,12 +29,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/users', aerolineasRouter);
+app.use('/', indexRouter); 
+app.use('/users', usersRouter); 
+app.use('/users', aerolineasRouter);// variables a ver en postman
 app.use('/users', avionRouter);
 app.use('/users', cronogramaRouter);
-
+app.use('/users', estadoRouter);
+app.use('/users', pasajeroRouter);
+app.use('/users', pilotoRouter);
+app.use('/users', terminalRouter);
+app.use('/users', ubicacionavionRouter);
+app.use('/users', ubicacionRouter);
+app.use('/users', vueloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

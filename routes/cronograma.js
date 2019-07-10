@@ -4,7 +4,7 @@ var models = require("./../mysql")
 /* GET users listing. */
 router.get('/', function(req, res, next) {
  
-  models.Cronograma.findAll().then(result => {
+  models.cronograma.findAll().then(result => {
     res.status(200).jsonp(result);
   })
 });

@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Terminal = sequelize.define("Terminal", {
+  var Terminal = sequelize.define("terminal", {
     id_terminal: {
       type: DataTypes.INTEGER,
          autoIncrement: true,

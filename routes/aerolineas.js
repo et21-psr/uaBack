@@ -4,7 +4,7 @@ var models = require("./../mysql")
 /* GET users listing. */
 router.get('/', function(req, res, next) {
  
-  models.Aerolinea.findAll().then(result => {
+  models.aerolinea.findAll().then(result => {
     res.status(200).jsonp(result);
   })
 });

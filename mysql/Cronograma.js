@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var Cronograma = sequelize.define("Cronograma", {
+  var Cronograma = sequelize.define("cronograma", {
     id_cronograma: {
       type: DataTypes.INTEGER,
          autoIncrement: true,
