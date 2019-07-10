@@ -31,16 +31,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); 
 app.use('/users', usersRouter); 
-app.use('/users', aerolineasRouter);// variables a ver en postman
-app.use('/users', avionRouter);
-app.use('/users', cronogramaRouter);
-app.use('/users', estadoRouter);
-app.use('/users', pasajeroRouter);
-app.use('/users', pilotoRouter);
-app.use('/users', terminalRouter);
-app.use('/users', ubicacionavionRouter);
-app.use('/users', ubicacionRouter);
-app.use('/users', vueloRouter);
+app.use('/aerolineas', aerolineasRouter);// variables a ver en postman
+app.use('/avion', avionRouter);
+app.use('/cronograma', cronogramaRouter);
+app.use('/estado', estadoRouter);
+app.use('/pasajero', pasajeroRouter);
+app.use('/piloto', pilotoRouter);
+app.use('/terminal', terminalRouter);
+app.use('/ubicacionavion', ubicacionavionRouter);
+app.use('/ubicacion', ubicacionRouter);
+app.use('/vuelo', vueloRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
