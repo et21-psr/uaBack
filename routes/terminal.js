@@ -31,4 +31,11 @@ router.get('/:id', function(req, res, next) {
     });
     })
 
+    router.post('/', function(req, res, next){
+      let terminal = req.body;
+      models.terminal.create(terminal).then(terminal => {
+        res.status(200).jsonp(terminal);
+      })
+    });
+
 module.exports = router;

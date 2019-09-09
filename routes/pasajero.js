@@ -30,4 +30,12 @@ router.get('/:id', function(req, res, next) {
     res.status(200).jsonp(result);
     });
     })
+
+    router.post('/', function(req, res, next){
+      let pasajero = req.body;
+      models.pasajero.create(pasajero).then(pasajero => {
+        res.status(200).jsonp(pasajero);
+      })
+    });
+
 module.exports = router;

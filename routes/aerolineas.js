@@ -29,6 +29,13 @@ router.get('/:id', function(req, res, next) {
     }).then(result => {
     res.status(200).jsonp(result);
     });
-    })
-    
+  })
+
+    router.post('/', function(req, res, next){
+      let aerolinea = req.body;
+      models.aerolinea.create(aerolinea).then(aerolinea => {
+        res.status(200).jsonp(aerolinea);
+      })
+    });
+
 module.exports = router;

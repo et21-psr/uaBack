@@ -31,5 +31,11 @@ router.get('/:id', function(req, res, next) {
     });
     })
 
+    router.post('/', function(req, res, next){
+      let ubicacionavion = req.body;
+      models.ubicacionavion.create(ubicacionavion).then(ubicacionavion => {
+        res.status(200).jsonp(ubicacionavion);
+      })
+    });
 
 module.exports = router;

@@ -30,5 +30,11 @@ router.get('/:id', function(req, res, next) {
     res.status(200).jsonp(result);
     });
     })
-    
+
+    router.post('/', function(req, res, next){
+      let cronograma = req.body;
+      models.cronograma.create(cronograma).then(cronograma => {
+        res.status(200).jsonp(cronograma);
+      })
+    });
 module.exports = router;

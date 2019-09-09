@@ -30,4 +30,11 @@ router.get('/:id', function(req, res, next) {
     res.status(200).jsonp(result);
     });
     })
+
+    router.post('/', function(req, res, next){
+      let usuario = req.body;
+      models.usuario.create(usuario).then(uusuario => {
+        res.status(200).jsonp(usuario);
+      })
+    });
 module.exports = router;

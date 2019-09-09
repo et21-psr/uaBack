@@ -31,4 +31,11 @@ router.get('/:id', function(req, res, next) {
     });
     })
 
+    router.post('/', function(req, res, next){
+      let estado = req.body;
+      models.estado.create(estado).then(estado => {
+        res.status(200).jsonp(estado);
+      })
+    });
+
 module.exports = router;
