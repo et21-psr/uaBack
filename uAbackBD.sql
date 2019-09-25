@@ -55,6 +55,13 @@ CREATE TABLE `piloto` (
   KEY `piloto_avion_idx` (`id_avion`),
   CONSTRAINT `piloto_avion` FOREIGN KEY (`id_avion`) REFERENCES `avion` (`id_avion`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE `terminal` (
+  `id_terminal` int(11) NOT NULL AUTO_INCREMENT,
+  `direccion` varchar(45) NOT NULL,
+  `created_at` datetime(6) DEFAULT CURRENT_TIMESTAMP(6),
+  `updated_at` datetime(6) DEFAULT NULL,
+  PRIMARY KEY (`id_terminal`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE `puerta` (
   `id_puerta` int(11) NOT NULL AUTO_INCREMENT,
   `id_terminal` int(11) NOT NULL,
@@ -63,13 +70,6 @@ CREATE TABLE `puerta` (
   PRIMARY KEY (`id_puerta`),
   KEY `terminal_puerta_idx` (`id_terminal`),
   CONSTRAINT `puerta_terminal` FOREIGN KEY (`id_terminal`) REFERENCES `terminal` (`id_terminal`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-CREATE TABLE `terminal` (
-  `id_terminal` int(11) NOT NULL AUTO_INCREMENT,
-  `direccion` varchar(45) NOT NULL,
-  `created_at` datetime(6) DEFAULT CURRENT_TIMESTAMP(6),
-  `updated_at` datetime(6) DEFAULT NULL,
-  PRIMARY KEY (`id_terminal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 CREATE TABLE `ubicacion` (
   `id_ubicacion` int(11) NOT NULL,
