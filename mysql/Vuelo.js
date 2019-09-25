@@ -37,10 +37,10 @@ module.exports = function(sequelize, DataTypes) {
     fecha:{
         type : DataTypes.STRING
     },
-    hora_de_salida:{
+    hora_salida:{
         type : DataTypes.STRING
     },
-    hora_de_llegada:{
+    hora_llegada:{
         type : DataTypes.STRING
     },
     clima:{

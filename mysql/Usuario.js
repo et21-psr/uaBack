@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
          autoIncrement: true,
          primaryKey: true
     },
-    id_aerolinea:{
+    id_usuario:{
         type : DataTypes.STRING
     },
     nombre:{
@@ -17,6 +17,12 @@ module.exports = function(sequelize, DataTypes) {
         type : DataTypes.STRING
     },
     permisos:{
+        type : DataTypes.STRING
+    },
+    correo:{
+        type : DataTypes.STRING
+    },
+    contraseña:{
         type : DataTypes.STRING
     },
     createdAt:{
